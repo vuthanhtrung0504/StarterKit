@@ -1,0 +1,67 @@
+module.exports = {
+  env: {
+    browser: true,
+    es6: true,
+    mocha: true,
+    jest: true,
+  },
+  extends: [
+    'plugin:react/recommended',
+    'airbnb',
+    'prettier/react',
+    'eslint-config-prettier',
+  ],
+  globals: {
+    Atomics: 'readonly',
+    SharedArrayBuffer: 'readonly',
+  },
+  parserOptions: {
+    ecmaFeatures: {
+      jsx: true,
+    },
+    ecmaVersion: 2018,
+    sourceType: 'module',
+  },
+  plugins: ['react', 'prettier', 'react-native', 'simple-import-sort'],
+  parser: 'babel-eslint',
+  rules: {
+    'react/jsx-filename-extension': [
+      1,
+      {
+        extensions: ['.js', '.jsx'],
+      },
+    ],
+    'no-plusplus': [0],
+    'react/jsx-props-no-spreading': [0],
+    'global-require': [0],
+    camelcase: [0],
+    'no-bitwise': [0],
+    'no-unused-expressions': [0],
+    'no-underscore-dangle': [0],
+    'import/extensions': [0],
+    'no-return-assign': [0],
+    'react/no-access-state-in-setstate': [0],
+    'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'react/destructuring-assignment': [0],
+    'import/prefer-default-export': [0],
+    'react/prop-types': [0],
+    'no-nested-ternary': [0],
+    'prettier/prettier': [
+      'error',
+      {
+        jsxBracketSameLine: false,
+        trailingComma: 'es5',
+        singleQuote: true,
+        printWidth: 80,
+        bracketSpacing: true,
+        parser: 'babel',
+        tabWidth: 2,
+        useTabs: false,
+        semi: true,
+        arrowParens: 'avoid',
+        rangeStart: 0,
+        rangeEnd: null,
+      },
+    ],
+  },
+};
